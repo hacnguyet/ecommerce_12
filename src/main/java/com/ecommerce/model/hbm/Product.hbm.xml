@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ecommerce.model">
+	<class name="Product" table="product">
+		<id name="productId" column="product_id" type="integer" length="11">
+			<generator class="increment"/>
+		</id>
+		
+		<property name="productName" column="name" type="string" length="255" not-null="true"/>
+		<property name="property" column="property" type="string" length="255" />
+		<property name="count" column="count" type="integer" length="11" />
+		<property name="price" column="price" type="float" length="11"/>
+		<property name="discount" column="discount" type="float" length="11" />
+		<property name="createAt" column="create_at" type="date"/>
+		<property name="updateAt" column="update_at" type="date"/>
+		
+		<many-to-one name="store" class="Store" >
+			<column name="store_id" not-null="true" />
+		</many-to-one>
+		
+		<many-to-one name="category" class="Category" >
+			<column name="category_id" not-null="true" />
+		</many-to-one>
+		
+		<list name="saleHistories" lazy="true" inverse="true">
+			<key column="product_id" not-null="true" />
+			<list-index column="salehistory_id" />
+			<one-to-many class="Salehistory" />
+		</list>
+		
+		<list name="favorites" lazy="true" inverse="true">
+			<key column="product_id" not-null="true" />
+			<list-index column="favorite_id" />
+			<one-to-many class="Favorite" />
+		</list>
+		
+		<list name="reviews" lazy="true" inverse="true">
+			<key column="product_id" not-null="true" />
+			<list-index column="review_id" />
+			<one-to-many class="Review" />
+		</list>
+		
+		<list name="images" lazy="true" inverse="true">
+			<key column="product_id" not-null="true" />
+			<list-index column="image_id" />
+			<one-to-many class="Image" />
+		</list>
+		
+	</class>	
+</hibernate-mapping>
