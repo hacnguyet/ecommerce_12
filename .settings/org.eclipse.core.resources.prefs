@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/ecommerce/dao/StoreDAO.java=UTF-8
+encoding//src/main/java/com/ecommerce/model/Category.java=UTF-8
+encoding//src/main/java/com/ecommerce/model/Favorite.java=UTF-8
+encoding//src/main/java/com/ecommerce/model/Image.java=UTF-8
+encoding//src/main/java/com/ecommerce/model/Product.java=UTF-8
+encoding//src/main/java/com/ecommerce/model/Review.java=UTF-8
+encoding//src/main/java/com/ecommerce/model/Salehistory.java=UTF-8
+encoding//src/main/java/com/ecommerce/model/Store.java=UTF-8
+encoding//src/main/java/com/ecommerce/model/User.java=UTF-8
+encoding//src/main/java/com/ecommerce/service/StoreService.java=UTF-8
+encoding//src/main/java/com/ecommerce/service/impl/StoreServiceImpl.java=UTF-8
