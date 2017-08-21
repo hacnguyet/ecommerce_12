@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//WebContent/layouts/footer.jsp=UTF-8
 encoding//src/main/java/com/ecommerce/dao/StoreDAO.java=UTF-8
 encoding//src/main/java/com/ecommerce/model/Category.java=UTF-8
 encoding//src/main/java/com/ecommerce/model/Favorite.java=UTF-8

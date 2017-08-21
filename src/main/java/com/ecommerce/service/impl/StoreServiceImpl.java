@@ -2,7 +2,6 @@ package com.ecommerce.service.impl;
 
 import java.util.List;
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import com.ecommerce.action.ListStoreAction;
 import com.ecommerce.dao.StoreDAO;
 import com.ecommerce.model.Store;
@@ -14,12 +13,17 @@ import com.ecommerce.service.StoreService;
  * @author ManhTT 新規作成 2017/08/16
  */
 public class StoreServiceImpl implements StoreService {
+	
 	// Logger
 	private static final Logger logger = Logger.getLogger(ListStoreAction.class);
 
-	// Object Store DAO
-	@Autowired
 	private StoreDAO storeDAO;
+	
+	public void setStoreDAO(StoreDAO storeDAO) {
+		this.storeDAO = storeDAO;
+	}
+
+
 
 	@Override
 	public List<Store> list() throws Exception {

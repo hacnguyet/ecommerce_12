@@ -6,20 +6,21 @@ import javax.transaction.Transactional;
 
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.ecommerce.model.Store;
 import com.ecommerce.dao.StoreDAO;
 
 public class StoreDAOImpl implements StoreDAO{
 	
-	@Autowired
 	private SessionFactory sessionFactory;
 	
 	public StoreDAOImpl() {
 	}
 
 	public StoreDAOImpl(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+	
+	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
 

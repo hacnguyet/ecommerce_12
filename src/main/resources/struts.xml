@@ -11,13 +11,17 @@
 	<constant name="struts.enable.SlashesInActionNames" value="true" />
 	
 	<!-- Define default-web package: struts-default -->
-	<package name="Ecommerce" namespace="/" extends="struts-default">
+	<package name="default" namespace="/" extends="struts-default">
 		<result-types>
             <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
         </result-types>
+        
+        <action name="homepage" class="homepageAction">
+			<result name="success" type="tiles">homepage</result>
+		</action>
 		
-		<action name="listStore" class="listStoreAction">
-			<result name="success" type="tiles">StoreList</result>
+		<action name="liststore" class="liststoreAction">
+			<result name="success" type="tiles">liststore</result>
 		</action>
 	</package>
 </struts>
