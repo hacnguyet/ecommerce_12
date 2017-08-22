@@ -5,23 +5,21 @@
 
 <tiles-definitions>
 	<!-- Define Struts Tile for Front-End module -->
-	<definition name="BaseLayout" template="/layouts/template.jsp">
+	<definition name="baselayout" template="/layouts/template.jsp">
 		<put-attribute name="title" value="Ecommerce"/>
 		<put-attribute name="header" value="/layouts/header.jsp" />
 		<put-attribute name="body" value="/layouts/body.jsp" />
 		<put-attribute name="footer" value="/layouts/footer.jsp" />
 	</definition>
 
-	<definition name="HomePage" extends="BaseLayout">
-		<put-attribute name="body" value="/WEB-INF/index.jsp" />
-		<put-list-attribute name="js">
-		</put-list-attribute>
-		<put-list-attribute name="css">
-		</put-list-attribute>
+	<definition name="homepage" extends="baselayout">
+		<put-attribute name="title" value="Ecommerce | Home"/>
+		<put-attribute name="body" value="/views/homepage.jsp" />
 	</definition>
 	
-	<definition name="StoreList" extends="BaseLayout">
-		<put-attribute name="body" value="/views/StoreList.jsp" />
+	<definition name="liststore" extends="baselayout">
+	<put-attribute name="title" value="Ecommerce | ListStore"/>
+		<put-attribute name="body" value="/views/liststore.jsp" />
 	</definition>
 
 </tiles-definitions>

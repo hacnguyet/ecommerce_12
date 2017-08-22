@@ -1,1 +1,3 @@
-This is a homepage
+<% 
+  response.sendRedirect("/ecommerce_12/homepage");
+%>

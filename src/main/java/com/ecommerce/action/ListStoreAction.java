@@ -2,16 +2,17 @@ package com.ecommerce.action;
 
 import java.util.List;
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import com.opensymphony.xwork2.ActionSupport;
 import com.ecommerce.service.StoreService;
 import com.ecommerce.model.Store;
 
 public class ListStoreAction extends ActionSupport {
+	
+	private static final long serialVersionUID = 1L;
+	
 	// Logger
 	private static final Logger logger = Logger.getLogger(ListStoreAction.class);
 	
-	@Autowired
 	private StoreService storeService;
 
 	private List<Store> listStore;
