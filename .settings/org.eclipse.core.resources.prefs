@@ -1,6 +1,10 @@
 eclipse.preferences.version=1
 encoding//WebContent/layouts/footer.jsp=UTF-8
+encoding//src/main/java/com/ecommerce/action/HomePageAction.java=UTF-8
+encoding//src/main/java/com/ecommerce/action/ListStoreAction.java=UTF-8
+encoding//src/main/java/com/ecommerce/action/LoginAction.java=UTF-8
 encoding//src/main/java/com/ecommerce/dao/StoreDAO.java=UTF-8
+encoding//src/main/java/com/ecommerce/dao/UserDAO.java=UTF-8
 encoding//src/main/java/com/ecommerce/model/Category.java=UTF-8
 encoding//src/main/java/com/ecommerce/model/Favorite.java=UTF-8
 encoding//src/main/java/com/ecommerce/model/Image.java=UTF-8
@@ -10,4 +14,6 @@ encoding//src/main/java/com/ecommerce/model/Salehistory.java=UTF-8
 encoding//src/main/java/com/ecommerce/model/Store.java=UTF-8
 encoding//src/main/java/com/ecommerce/model/User.java=UTF-8
 encoding//src/main/java/com/ecommerce/service/StoreService.java=UTF-8
+encoding//src/main/java/com/ecommerce/service/UserService.java=UTF-8
 encoding//src/main/java/com/ecommerce/service/impl/StoreServiceImpl.java=UTF-8
+encoding//src/main/java/com/ecommerce/service/impl/UserServiceImpl.java=UTF-8

@@ -4,6 +4,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
 	<!-- ================== LISTSTORE MODULE ================== -->
+	<bean id="userDAO" class="com.ecommerce.dao.impl.UserDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- ================== LISTSTORE MODULE ================== -->
 	<bean id="storeDAO" class="com.ecommerce.dao.impl.StoreDAOImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>

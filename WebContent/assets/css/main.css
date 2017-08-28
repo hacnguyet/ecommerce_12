@@ -1428,12 +1428,14 @@ h2.title {
 #form {
   display: block;
   margin-bottom: 185px;
-  margin-top: 185px;
+  margin-top: 50px;
   overflow: hidden;
 }
 
 .login-form {
-
+  width: 90%;	
+  max-width: 250px;
+  margin: 0 auto;	
 }
 
 .signup-form {

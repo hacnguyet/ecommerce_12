@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
-<%@ taglib prefix="s" uri="/struts-tags"%>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 <!DOCTYPE html>
 <html>
@@ -27,9 +26,9 @@
 	    <link href="${pageContext.request.contextPath}/assets/images/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
 	</head>
 	<body>
-		<tiles:insertAttribute name="header" />
-		<tiles:insertAttribute name="body" />
-		<tiles:insertAttribute name="footer" />
+		<tiles:insertAttribute name="header" ignore="true"/>
+		<tiles:insertAttribute name="body" ignore="true"/>
+		<tiles:insertAttribute name="footer" ignore="true"/>
 		
 		<!-- JavaScript -->
 		<script src="${pageContext.request.contextPath}/assets/js/jquery.js"></script>
