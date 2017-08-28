@@ -15,7 +15,7 @@ import com.ecommerce.service.StoreService;
 public class StoreServiceImpl implements StoreService {
 	
 	// Logger
-	private static final Logger logger = Logger.getLogger(ListStoreAction.class);
+	private static final Logger logger = Logger.getLogger(StoreServiceImpl.class);
 
 	private StoreDAO storeDAO;
 	

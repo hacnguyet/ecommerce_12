@@ -13,8 +13,13 @@
 	</definition>
 
 	<definition name="homepage" extends="baselayout">
-		<put-attribute name="title" value="Ecommerce | Home"/>
+		<put-attribute name="title" value="Home | Ecommerce"/>
 		<put-attribute name="body" value="/views/homepage.jsp" />
+	</definition>
+	
+	<definition name="login" extends="baselayout">
+		<put-attribute name="title" value="Login | Ecommerce"/>
+		<put-attribute name="body" value="/views/login.jsp" />
 	</definition>
 	
 	<definition name="liststore" extends="baselayout">

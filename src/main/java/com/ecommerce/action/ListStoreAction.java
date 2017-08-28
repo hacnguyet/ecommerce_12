@@ -6,6 +6,11 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.ecommerce.service.StoreService;
 import com.ecommerce.model.Store;
 
+/**
+ * ListStore Action 
+ * @author ManhTT
+ * 新規作成 2017/08/16
+ */
 public class ListStoreAction extends ActionSupport {
 	
 	private static final long serialVersionUID = 1L;

@@ -35,9 +35,4 @@
 		<param-value>classpath:spring-*-config.xml</param-value>
 	</context-param>
 
-	<!-- Define Welcome File List -->
-	<welcome-file-list>
-		<welcome-file>/WEB-INF/index.jsp</welcome-file>
-	</welcome-file-list>
-
 </web-app>

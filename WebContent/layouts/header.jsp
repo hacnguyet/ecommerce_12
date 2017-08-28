@@ -34,30 +34,7 @@
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="logo pull-left">
-						<a href="index.html"><img src="${pageContext.request.contextPath}/assets/images/home/logo.png" alt="" /></a>
-					</div>
-					<div class="btn-group pull-right">
-						<div class="btn-group">
-							<button type="button" class="btn btn-default dropdown-toggle usa"
-								data-toggle="dropdown">
-								USA <span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu">
-								<li><a href="#">Canada</a></li>
-								<li><a href="#">UK</a></li>
-							</ul>
-						</div>
-
-						<div class="btn-group">
-							<button type="button" class="btn btn-default dropdown-toggle usa"
-								data-toggle="dropdown">
-								DOLLAR <span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu">
-								<li><a href="#">Canadian Dollar</a></li>
-								<li><a href="#">Pound</a></li>
-							</ul>
-						</div>
+						<a href="homepage"><img src="${pageContext.request.contextPath}/assets/images/home/logo.png" alt="" /></a>
 					</div>
 				</div>
 				<div class="col-sm-8">
@@ -69,7 +46,7 @@
 									Checkout</a></li>
 							<li><a href="cart.html"><i class="fa fa-shopping-cart"></i>
 									Cart</a></li>
-							<li><a href="login.html"><i class="fa fa-lock"></i>
+							<li><a href="login"><i class="fa fa-lock"></i>
 									Login</a></li>
 						</ul>
 					</div>
@@ -94,7 +71,7 @@
 					</div>
 					<div class="mainmenu pull-left">
 						<ul class="nav navbar-nav collapse navbar-collapse">
-							<li><a href="index.html" class="active">Home</a></li>
+							<li><a href="homepage" class="active">Home</a></li>
 							<li class="dropdown"><a href="#">Shop<i
 									class="fa fa-angle-down"></i></a>
 								<ul role="menu" class="sub-menu">
