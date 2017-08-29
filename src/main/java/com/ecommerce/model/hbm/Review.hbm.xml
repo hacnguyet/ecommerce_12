@@ -9,8 +9,8 @@
 		</id>
 		
 		<property name="content" column="content" type="text" />
-		<property name="createAt" column="create_at" type="date"/>
-		<property name="updateAt" column="update_at" type="date"/>
+		<property name="createAt" column="create_at" type="timestamp" generated="insert"/>
+		<property name="updateAt" column="update_at" type="timestamp" generated="always"/>
 
 		<many-to-one name="user" class="User" >
 			<column name="user_id" not-null="true" />

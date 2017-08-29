@@ -10,8 +10,8 @@
 		
 		<property name="storeName" column="name" type="string" length="255" not-null="true"/>
 		<property name="storeAddress" column="address" type="string" length="255"/>
-		<property name="createAt" column="create_at" type="date"/>
-		<property name="updateAt" column="update_at" type="date"/>
+		<property name="createAt" column="create_at" type="timestamp" generated="insert"/>
+		<property name="updateAt" column="update_at" type="timestamp" generated="always"/>
 
 		<many-to-one name="user" class="User" >
 			<column name="user_id" not-null="true" />

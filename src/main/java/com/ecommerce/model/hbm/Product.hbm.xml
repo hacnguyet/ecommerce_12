@@ -13,8 +13,8 @@
 		<property name="count" column="count" type="integer" length="11" />
 		<property name="price" column="price" type="float" length="11"/>
 		<property name="discount" column="discount" type="float" length="11" />
-		<property name="createAt" column="create_at" type="date"/>
-		<property name="updateAt" column="update_at" type="date"/>
+		<property name="createAt" column="create_at" type="timestamp" generated="insert"/>
+		<property name="updateAt" column="update_at" type="timestamp" generated="always"/>
 		
 		<many-to-one name="store" class="Store" >
 			<column name="store_id" not-null="true" />

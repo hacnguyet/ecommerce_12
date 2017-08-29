@@ -9,8 +9,8 @@
 		</id>
 		
 		<property name="categoryName" column="name" type="string" length="11" not-null="true"/>
-		<property name="createAt" column="create_at" type="date"/>
-		<property name="updateAt" column="update_at" type="date"/>
+		<property name="createAt" column="create_at" type="timestamp" generated="insert"/>
+		<property name="updateAt" column="update_at" type="timestamp" generated="always"/>
 		
 		<list name="products" lazy="true" inverse="true">
 			<key column="category_id" not-null="true" />

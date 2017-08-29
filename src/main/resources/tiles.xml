@@ -11,20 +11,25 @@
 		<put-attribute name="body" value="/layouts/body.jsp" />
 		<put-attribute name="footer" value="/layouts/footer.jsp" />
 	</definition>
+	
+	<definition name="sys_error" template="/layouts/template.jsp">
+		<put-attribute name="title" value="System'error | Ecommerce"/>
+		<put-attribute name="body" value="/views/404.jsp" />
+	</definition>
 
-	<definition name="homepage" extends="baselayout">
+	<definition name="home" extends="baselayout">
 		<put-attribute name="title" value="Home | Ecommerce"/>
 		<put-attribute name="body" value="/views/homepage.jsp" />
 	</definition>
 	
 	<definition name="login" extends="baselayout">
 		<put-attribute name="title" value="Login | Ecommerce"/>
-		<put-attribute name="body" value="/views/login.jsp" />
+		<put-attribute name="body" value="/views/user/login.jsp" />
 	</definition>
 	
-	<definition name="liststore" extends="baselayout">
-	<put-attribute name="title" value="Ecommerce | ListStore"/>
-		<put-attribute name="body" value="/views/liststore.jsp" />
+	<definition name="signup" extends="baselayout">
+		<put-attribute name="title" value="Signup | Ecommerce"/>
+		<put-attribute name="body" value="/views/user/signup.jsp" />
 	</definition>
 
 </tiles-definitions>

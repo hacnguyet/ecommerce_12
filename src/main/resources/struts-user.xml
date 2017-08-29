@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- Configure NameSpace for action web -->
+	<package name="user" namespace="/user" extends="default">
+		<global-results>
+			<result name="sys_error" type="tiles">sys_error</result>
+		</global-results>
+		
+		<action name="login" class="userAction" method="login">
+			<result name="success" type="redirect">/</result>
+			<result name="error" type="tiles">login</result>
+		</action>
+		
+		<action name="logout" class="userAction" method="logout">
+			<result name="success" type="redirect">/</result>
+		</action>
+		
+		<action name="signup" class="userAction" method="signup">
+			<result name="success" type="redirect">/</result>
+			<result name="error" type="tiles">signup</result>
+		</action>
+	</package>
+</struts>

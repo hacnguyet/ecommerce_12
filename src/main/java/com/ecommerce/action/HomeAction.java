@@ -7,7 +7,7 @@ import com.opensymphony.xwork2.ActionSupport;
  * @author ManhTT
  * 新規作成 2017/08/16
  */
-public class HomePageAction extends ActionSupport {
+public class HomeAction extends ActionSupport {
 	
 	private static final long serialVersionUID = 1L;
 	
