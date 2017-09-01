@@ -4,7 +4,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 	
 	<!-- ================== HOME MODULE ================== -->
-	<bean id="homeAction" class="com.ecommerce.action.HomeAction" />
+	<bean id="homeAction" class="com.ecommerce.action.HomeAction">
+		<property name="categoryService" ref="categoryService" />
+	</bean>
 	
 	<!-- ================== USER MODULE ================== -->
 	<bean id="userAction" class="com.ecommerce.action.UserAction" scope="prototype">

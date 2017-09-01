@@ -3,6 +3,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
+	<!-- ================== HOME MODULE ================== -->
+	<bean id="categoryDAO" class="com.ecommerce.dao.impl.CategoryDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
 	<!-- ================== USER MODULE ================== -->
 	<bean id="userDAO" class="com.ecommerce.dao.impl.UserDAOImpl">
 		<property name="sessionFactory" ref="sessionFactory" />

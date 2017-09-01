@@ -3,6 +3,15 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
+	<!-- ================== HOME MODULE ================== -->
+	<bean id="categoryService" parent="transactionProxyTemplate">
+		<property name="target">
+			<bean class="com.ecommerce.service.impl.CategoryServiceImpl">
+				<property name="categoryDAO" ref="categoryDAO" />
+			</bean>
+		</property>
+	</bean>
+
 	<!-- ================== USER MODULE ================== -->
 	<bean id="userService" parent="transactionProxyTemplate">
 		<property name="target">
