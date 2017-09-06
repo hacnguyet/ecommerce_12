@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
 <struts>
 	<!-- devMode is helpful when you want some extra logs for debugging -->
 	<constant name="struts.devMode" value="true" />
@@ -16,26 +19,16 @@
             <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
         </result-types>
         
-        <action name="" class="homepageAction">
-			<result name="success" type="tiles">homepage</result>
-		</action>
-		
-		<action name="login" class="authAction" method="login">
-			<result name="success" type="tiles">login</result>
-			<result name="error" type="redirect">/</result>
-		</action>
-		
-		<action name="loginAction" class="authAction" method="loginAction">
-			<result name="success" type="redirect">/</result>
-			<result name="error" type="tiles">login</result>
-		</action>
-		
-		<action name="logoutAction" class="authAction" method="logoutAction">
-			<result name="success" type="redirect">/</result>
-		</action>
-		
-		<action name="liststore" class="liststoreAction">
-			<result name="success" type="tiles">liststore</result>
+        <global-results>
+			<result name="sys_error" type="tiles">sys_error</result>
+		</global-results>
+        
+        <action name="" class="homeAction">
+			<result name="success" type="tiles">home</result>
 		</action>
 	</package>
+	
+	<!-- ===== Include Web Module Configuration ===== -->
+	<include file="struts-user.xml" />
+	
 </struts>

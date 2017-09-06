@@ -54,8 +54,14 @@ public class User {
 		
 	}
 	
+	public User(String userName, String userEmail, String password, String userType) {
+		this.userName = userName;
+		this.userEmail = userEmail;
+		this.password = password;
+		this.userType = userType;
+	}
+	
 	public User(Integer userId, String password, String userName, String userType, String userGender, String userEmail, String telNumber, Date createAt, Date updateAt, List<Store> stores, List<Favorite> favorites, List<Review> reviews, List<Salehistory> saleHistories) {
-		super();
 		this.userId = userId;
 		this.password = password;
 		this.userName = userName;

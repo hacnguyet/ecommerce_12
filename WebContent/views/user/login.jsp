@@ -13,9 +13,9 @@
 							<s:property value="message" />
 						</div>
 					</s:if>	
-					<s:form action="/loginAction" method="POST">
-						<s:textfield  name="userName" placeholder="Username"/>
-						<s:password name="password" placeholder="Username"/>
+					<s:form action="/user/login" method="POST">
+						<s:textfield  name="userInfo.userName" placeholder="Username"/>
+						<s:password name="userInfo.password" placeholder="Password"/>
 						<span>
 							<s:checkbox name="signed_in" class="checkbox"/>
 							<s:text name="Keep me signed in" /> 

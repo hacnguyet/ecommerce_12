@@ -10,8 +10,8 @@
 		
 		<property name="color" column="color" type="string" length="11" not-null="true"/>
 		<property name="image" column="image" type="string" length="11" not-null="true"/>
-		<property name="createAt" column="create_at" type="date"/>
-		<property name="updateAt" column="update_at" type="date"/>
+		<property name="createAt" column="create_at" type="timestamp" generated="insert"/>
+		<property name="updateAt" column="update_at" type="timestamp" generated="always"/>
 		
 		<many-to-one name="product" class="Product" >
 			<column name="product_id" not-null="true" />
