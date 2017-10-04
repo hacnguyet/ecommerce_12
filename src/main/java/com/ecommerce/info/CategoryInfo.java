@@ -7,13 +7,23 @@ package com.ecommerce.info;
  */
 public class CategoryInfo {
 	
+	private Integer categoryId;
 	private String categoryName;
 	
 	// Construction
 	public CategoryInfo(){}
 	
-	public CategoryInfo(String categoryName){
+	public CategoryInfo(Integer categoryId, String categoryName){
+		this.categoryId = categoryId;
 		this.categoryName = categoryName;
+	}
+
+	public Integer getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(Integer categoryId) {
+		this.categoryId = categoryId;
 	}
 
 	public String getCategoryName() {

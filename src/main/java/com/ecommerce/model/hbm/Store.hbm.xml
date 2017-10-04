@@ -17,7 +17,7 @@
 			<column name="user_id" not-null="true" />
 		</many-to-one>
 		
-		<list name="products" lazy="true" inverse="true">
+		<list name="products" inverse="true">
 			<key column="store_id" not-null="true" />
 			<list-index column="product_id" />
 			<one-to-many class="Product" />

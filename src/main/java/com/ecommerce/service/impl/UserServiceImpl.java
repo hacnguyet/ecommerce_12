@@ -30,19 +30,36 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	@Override
-	public User findByUserId(Integer userId) {
-		return userDAO.findByUserId(userId);
+	public UserInfo findByUserId(Integer userId) {
+		User user =  userDAO.findByUserId(userId);
+		if(user != null)
+			return new UserInfo(user);
+		return null;
 	}
 
 	@Override
-	public User findByUsername(String userName){
-		return userDAO.findByUsername(userName);
+	public UserInfo findByUsername(String userName){
+		User user =  userDAO.findByUsername(userName);
+		if(user != null)
+			return new UserInfo(user);
+		return null;
 	}
 	
 	@Override
-	public User findByEmail(String userEmail){
-		return userDAO.findByEmail(userEmail);
+	public UserInfo findByEmail(String userEmail){
+		User user =  userDAO.findByEmail(userEmail);
+		if(user != null)
+			return new UserInfo(user);
+		return null;
 
+	}
+	
+	@Override
+	public UserInfo findByStoreId(Integer storeId) {
+		User user = userDAO.findByStoreId(storeId);
+		if(user != null)
+			return new UserInfo(user);
+		return null;
 	}
 
 	public UserDAO getUserDAO() {

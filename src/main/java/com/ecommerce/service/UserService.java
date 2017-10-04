@@ -10,7 +10,8 @@ import com.ecommerce.model.User;
  */
 public interface UserService {
 	public User create(UserInfo userInfo) throws Exception;
-	public User findByUserId(Integer userId);
-	public User findByUsername(String userName);
-	public User findByEmail(String userEmail);
+	public UserInfo findByUserId(Integer userId);
+	public UserInfo findByUsername(String userName);
+	public UserInfo findByEmail(String userEmail);
+	public UserInfo findByStoreId(Integer storeId);
 }

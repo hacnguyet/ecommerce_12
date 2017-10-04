@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
-	<!-- ================== HOME MODULE ================== -->
+	<!-- ================== CATEGORY MODULE ================== -->
 	<bean id="categoryService" parent="transactionProxyTemplate">
 		<property name="target">
 			<bean class="com.ecommerce.service.impl.CategoryServiceImpl">
@@ -17,6 +17,24 @@
 		<property name="target">
 			<bean class="com.ecommerce.service.impl.UserServiceImpl">
 				<property name="userDAO" ref="userDAO" />
+			</bean>
+		</property>
+	</bean>
+	
+	<!-- ================== PRODUCT MODULE ================== -->
+	<bean id="productService" parent="transactionProxyTemplate">
+		<property name="target">
+			<bean class="com.ecommerce.service.impl.ProductServiceImpl">
+				<property name="productDAO" ref="productDAO" />
+			</bean>
+		</property>
+	</bean>
+	
+	<!-- ================== STORE MODULE ================== -->
+	<bean id="storeService" parent="transactionProxyTemplate">
+		<property name="target">
+			<bean class="com.ecommerce.service.impl.StoreServiceImpl">
+				<property name="storeDAO" ref="storeDAO" />
 			</bean>
 		</property>
 	</bean>

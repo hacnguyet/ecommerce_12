@@ -1,0 +1,64 @@
+.cart_image{
+	max-height: 100px;
+	max-width: 100px;
+}
+.lean_overlay{
+    opacity: 0.6;
+	position: fixed;
+	display: none;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #464646;
+}
+.form_popup{
+	width: 400px;
+	padding: 20px 20px 40px 20px;
+    display: block;	
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    margin-left: -200px;
+    top: -1000px;
+    background: #fff;
+}
+.form_popup h2{
+    color: #696763;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+.form_popup form input{
+	background: #F0F0E9;
+    border: medium none;
+    color: #696763;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    height: 40px;
+    margin-bottom: 10px;
+    outline: medium none;
+    padding-left: 10px;
+    width: 100%;
+}
+.form_popup form select{
+	background: #F0F0E9;
+    border: medium none;
+    color: #696763;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    height: 40px;
+    margin-bottom: 10px;
+    outline: medium none;
+    padding-left: 10px;
+    width: 100%;
+}
+.form_popup form button{
+	margin-top: 23px;
+}

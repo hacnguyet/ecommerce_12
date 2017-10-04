@@ -10,4 +10,5 @@ import com.ecommerce.model.Category;
  */
 public interface CategoryDAO {
 	public List<Category> getListCategories();
+	public Category findByCategoryId(Integer categoryId);
 }

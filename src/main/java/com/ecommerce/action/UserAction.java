@@ -61,10 +61,10 @@ public class UserAction extends ActionSupport implements MessageSourceAware {
 			}
 	
 			// Get user info from db with login info
-			User user = userService.findByUsername(userInfo.getUserName());
+			UserInfo userInfoDB = userService.findByUsername(userInfo.getUserName());
 	
 			// Continue check login info
-			if (user == null) {
+			if (userInfoDB == null) {
 				// Rerurn login form with warning message
 				setMessage(messageSource.getMessage("warning.user_does_not_exist", null, Locale.US));
 				return ERROR;
@@ -72,16 +72,16 @@ public class UserAction extends ActionSupport implements MessageSourceAware {
 				// Rerurn signup form with warning message
 				setMessage(messageSource.getMessage("warning.password_empty", null, Locale.US));
 				return ERROR;
-			} else if (!userInfo.getPassword().equals(user.getPassword())) {
+			} else if (!userInfo.getPassword().equals(userInfoDB.getPassword())) {
 				// Return login form with warning message
 				setMessage(messageSource.getMessage("warning.wrong_password", null, Locale.US));
 				return ERROR;
 			} 
 	
 			// If login info is correct, insert into session
-			session.put("userId", user.getUserId());
-			session.put("userName", user.getUserName());
-			session.put("userType", user.getUserType());
+			session.put("userId", userInfoDB.getUserId());
+			session.put("userName", userInfoDB.getUserName());
+			session.put("userType", userInfoDB.getUserType());
 			
 		} catch (Exception e) {
 			logger.error("Threw a Exception in UserAction::login, full stack trace follows:", e);

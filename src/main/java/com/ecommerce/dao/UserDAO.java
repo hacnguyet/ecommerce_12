@@ -12,4 +12,5 @@ public interface UserDAO {
 	public User findByUserId(Integer userId);
 	public User findByUsername(String userName);
 	public User findByEmail(String email);
+	public User findByStoreId(Integer storeId);
 }

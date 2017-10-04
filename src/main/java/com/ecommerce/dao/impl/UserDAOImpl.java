@@ -12,10 +12,13 @@ import com.ecommerce.dao.UserDAO;
  * 新規作成 2017/08/25
  */
 public class UserDAOImpl extends HibernateDaoSupport implements UserDAO {
+	
+	private String findByStoreIdHQL = "SELECT user FROM User as user INNER JOIN user.stores as store WHERE store.storeId = :storeId";
+	
 	/** 
 	 * Create new user
 	 * @param String userName, String email, String password
-	 * @return new user if success, null if fail
+	 * @return user
 	 */
 	@Override
 	public User create(User user) {
@@ -26,7 +29,7 @@ public class UserDAOImpl extends HibernateDaoSupport implements UserDAO {
 	/** 
 	 * Find user by userId
 	 * @param Integer userId
-	 * @return new user if success, null if fail
+	 * @return user if success, null if fail
 	 */ 
 	@Override
 	public User findByUserId(Integer userId) {
@@ -44,7 +47,7 @@ public class UserDAOImpl extends HibernateDaoSupport implements UserDAO {
 	/** 
 	 * Get user by userName
 	 * @param String userName
-	 * @return new user if success, null if fail
+	 * @return user if success, null if fail
 	 */ 
 	@Override
 	public User findByUsername(String userName) {
@@ -56,12 +59,24 @@ public class UserDAOImpl extends HibernateDaoSupport implements UserDAO {
 	/** 
 	 * Get user by user's email
 	 * @param String email
-	 * @return new user if success, null if fail
+	 * @return user if success, null if fail
 	 */ 
 	@Override
 	public User findByEmail(String userEmail) {
 		Query query = currentSession().getNamedQuery("User.SelectUserByEmail");
 		query.setParameter("userEmail", userEmail);
+		return (User) query.uniqueResult();
+	}
+	
+	/** 
+	 * Get user by storeId
+	 * @param Integer storeId
+	 * @return user if success, null if fail
+	 */ 
+	@Override
+	public User findByStoreId(Integer storeId) {
+		Query query = currentSession().createQuery(findByStoreIdHQL);
+		query.setParameter("storeId", storeId);
 		return (User) query.uniqueResult();
 	}
 }

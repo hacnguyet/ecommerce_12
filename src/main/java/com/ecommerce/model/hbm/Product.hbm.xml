@@ -24,25 +24,25 @@
 			<column name="category_id" not-null="true" />
 		</many-to-one>
 		
-		<list name="saleHistories" lazy="true" inverse="true">
+		<list name="saleHistories" inverse="true">
 			<key column="product_id" not-null="true" />
 			<list-index column="salehistory_id" />
 			<one-to-many class="Salehistory" />
 		</list>
 		
-		<list name="favorites" lazy="true" inverse="true">
+		<list name="favorites" inverse="true">
 			<key column="product_id" not-null="true" />
 			<list-index column="favorite_id" />
 			<one-to-many class="Favorite" />
 		</list>
 		
-		<list name="reviews" lazy="true" inverse="true">
+		<list name="reviews" inverse="true">
 			<key column="product_id" not-null="true" />
 			<list-index column="review_id" />
 			<one-to-many class="Review" />
 		</list>
 		
-		<list name="images" lazy="true" inverse="true">
+		<list name="images" inverse="true">
 			<key column="product_id" not-null="true" />
 			<list-index column="image_id" />
 			<one-to-many class="Image" />

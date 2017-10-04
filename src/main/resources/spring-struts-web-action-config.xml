@@ -13,5 +13,20 @@
 		<property name="userService" ref="userService" />
 	</bean>
 	
+	<!-- ================== STORE MODULE ================== -->
+	<bean id="storeAction" class="com.ecommerce.action.StoreAction" scope="prototype">
+		<property name="userService" ref="userService" />
+		<property name="productService" ref="productService" />
+		<property name="categoryService" ref="categoryService" />
+	</bean>
+	
+	<!-- ================== PRODUCT MODULE ================== -->
+	<bean id="productAction" class="com.ecommerce.action.ProductAction" scope="prototype">
+		<property name="userService" ref="userService" />
+		<property name="productService" ref="productService" />
+		<property name="categoryService" ref="categoryService" />
+		<property name="storeService" ref="storeService" />
+	</bean>
+	
 </beans>
 

@@ -20,17 +20,27 @@ public class CategoryServiceImpl implements CategoryService {
 	/** 
 	 * List all categories
 	 * @param none
-	 * @return List<Category> listCategory
+	 * @return List<CategoryInfo> listCategoryInfo
 	 */
 	@Override
 	public List<CategoryInfo> getListCategories(){
 		List<Category> listCategory =  categoryDAO.getListCategories();
 		List<CategoryInfo> listCategoryInfo = new ArrayList<>();
 		for (Category category : listCategory) {
-			CategoryInfo categoryInfo = new CategoryInfo(category.getCategoryName());
+			CategoryInfo categoryInfo = new CategoryInfo(category.getCategoryId(), category.getCategoryName());
 			listCategoryInfo.add(categoryInfo);
 		}
 		return listCategoryInfo;
+	}
+	
+	/** 
+	 * Find category by categoryName
+	 * @param String categoryName
+	 * @return Category category
+	 */
+	@Override
+	public Category findByCategoryId(Integer categoryId){
+		return categoryDAO.findByCategoryId(categoryId);
 	}
 
 	public CategoryDAO getCategoryDAO() {
